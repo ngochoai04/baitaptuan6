@@ -1,5 +1,9 @@
 @extends('dashboard')
-
+<style>
+       h6 {
+        text-align: center;
+    }
+</style>
 @section('content')
     <main class="signup-form">
         <div class="cotainer">
@@ -12,15 +16,18 @@
                                 @csrf
                                 <input name="id" type="hidden" value="{{$user->id}}">
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Name" id="name" class="form-control" name="name"
+                                    <h6>Name</h6>
+                                    <input type="text"  id="name" class="form-control" name="name"
                                            value="{{ $user->name }}"
                                            required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
+                                   
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Email" id="email_address" class="form-control"
+                                    <h6>Email</h6>
+                                    <input type="text" id="email_address" class="form-control"
                                            value="{{ $user->email }}"
                                            name="email" required autofocus>
                                     @if ($errors->has('email'))
@@ -28,7 +35,8 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="password" placeholder="Password" id="password" class="form-control"
+                                    <h6>Password</h6>
+                                    <input type="password"  id="password" class="form-control"
                                            name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
