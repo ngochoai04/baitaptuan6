@@ -64,6 +64,8 @@ class CrudUserController extends Controller
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
+            'tui' => $data['tui'],
+            'github' => $data['github'],
            
             'email' => $data['email'],
             'password' => Hash::make($data['password'])

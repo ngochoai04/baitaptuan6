@@ -148,10 +148,29 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
+                                @csrf
+                                <div class="form-group">
+                                    <h6><i class="fas fa-user me-2"></i>Tuoi</h6>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="name" class="form-control" name="name" placeholder="Nhập họ và tên của bạn" required autofocus>
+                                    </div>
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
                           
                             
                                 </div>
-                                
+                                @csrf
+                                <div class="form-group">
+                                    <h6><i class="fas fa-user me-2"></i>GitHub</h6>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="name" class="form-control" name="name" placeholder="Nhập họ và tên của bạn" required autofocus>
+                                    </div>
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
                                 <div class="form-group">
                                     <h6><i class="fas fa-envelope me-2"></i>Email</h6>
                                     <div class="input-group">

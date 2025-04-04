@@ -17,6 +17,22 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
+                                 @csrf
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="tui" id="tui" class="form-control" name="tui"
+                                           required autofocus>
+                                    @if ($errors->has('tui'))
+                                        <span class="text-danger">{{ $errors->first('tui') }}</span>
+                                    @endif
+                                </div>
+                                @csrf
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Github" id="github" class="form-control" name="github"
+                                           required autofocus>
+                                    @if ($errors->has('github'))
+                                        <span class="text-danger">{{ $errors->first('github') }}</span>
+                                    @endif
+                                </div>
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Email" id="email_address" class="form-control"
                                            name="email" required autofocus>
