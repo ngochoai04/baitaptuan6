@@ -19,7 +19,7 @@
                                 </div>
                                  @csrf
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="tui" id="tui" class="form-control" name="tui"
+                                    <input type="text" placeholder="tui" id="tuoi" class="form-control" name="tuoi"
                                            required autofocus>
                                     @if ($errors->has('tui'))
                                         <span class="text-danger">{{ $errors->first('tui') }}</span>

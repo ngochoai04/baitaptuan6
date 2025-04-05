@@ -64,7 +64,7 @@ class CrudUserController extends Controller
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
-            'tui' => $data['tui'],
+            'tuoi' => $data['tuoi'],
             'github' => $data['github'],
            
             'email' => $data['email'],
@@ -148,5 +148,17 @@ class CrudUserController extends Controller
         Auth::logout();
 
         return Redirect('login');
+    }
+
+    /**
+     * Dashboard page`
+     */
+    public function dashboard()
+    {
+        if(Auth::check()){
+            return view('dashboard');
+        }
+
+        return redirect("login")->withSuccess('You are not allowed to access');
     }
 }
